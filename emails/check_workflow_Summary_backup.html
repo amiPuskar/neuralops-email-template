@@ -19,8 +19,6 @@
 
     <!--[if !mso]><!-->
     <style type="text/css">
-        /* Embed Geist webfont for supported email clients (Apple Mail, iOS Mail, some Android clients). 
-           Ensure the .woff2 files exist at these paths, or replace URLs with your own CDN locations. */
         @font-face {
             font-family: 'Geist';
             font-style: normal;
@@ -48,7 +46,6 @@
             font-display: swap;
         }
 
-        /* Keep existing stack as fallback for non‑webfont clients */
         body,
         table,
         td,
@@ -64,7 +61,6 @@
             font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
         }
 
-        /* Diagonal stripe pattern for inactive segments */
         .inactive-segment {
             background-color: #FAFAFA;
             background-image: repeating-linear-gradient(45deg,
@@ -79,22 +75,18 @@
 
 <body
     style="width: 100% !important; min-height: 100% !important; margin: 0 !important; padding: 0 !important; font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: normal; color: #181D27; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #ffffff;">
-    <!-- Outer wrapper -->
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
         style="margin: 0; padding: 0; background-color: #ffffff;">
         <tr>
             <td align="center" style="padding: 0;">
-                <!-- Main container: 640px width -->
                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="576"
                     style="width: 576px; max-width: 576px; background-color: #ffffff; margin: 0 auto;">
                     <tr>
                         <td style="padding: 32px;">
-                            <!-- Body section: #FAFAFA background -->
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
                                 style="background-color: #FAFAFA; border-radius: 0;">
                                 <tr>
                                     <td style="padding: 32px 24px;">
-                                        <!-- Logo -->
                                         <table role="presentation" cellspacing="0" cellpadding="0" border="0"
                                             width="100%">
                                             <tr>
@@ -106,7 +98,6 @@
                                             </tr>
                                         </table>
 
-                                        <!-- Heading and body text -->
                                         <table role="presentation" cellspacing="0" cellpadding="0" border="0"
                                             width="100%">
                                             <tr>
@@ -115,7 +106,6 @@
                                                         border="0" width="100%">
                                                         <tr>
                                                             <td style="padding-bottom: 24px;">
-                                                                <!-- Heading: "Hey, {RecipientName}" -->
                                                                 <h1
                                                                     style="margin: 0; padding: 0; font-family: 'STK Bureau Serif', Georgia, serif; font-size: 28px; font-weight: 500; line-height: 1.43; letter-spacing: -0.28px; color: #181D27; text-align: left;">
                                                                     Hey, {RecipientName}
@@ -124,7 +114,6 @@
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <!-- Body text -->
                                                                 <p
                                                                     style="margin: 0; padding: 0; font-family: 'Geist', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; color: #535862; text-align: left;">
                                                                     Here is a quick look at your team's operational
@@ -138,18 +127,14 @@
                                             </tr>
                                         </table>
 
-                                        <!-- Table container -->
                                         <table role="presentation" cellspacing="0" cellpadding="0" border="0"
                                             width="100%"
                                             style="background-color: #FFFFFF; border: 1px solid #EAECF0; border-radius: 6px; box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); margin-bottom: 16px;">
                                             <tr>
                                                 <td>
-                                                    <!-- Table content -->
                                                     <table role="presentation" cellspacing="0" cellpadding="0"
                                                         border="0" width="100%">
-                                                        <!-- Table Header Row -->
                                                         <tr>
-                                                            <!-- Employee column header -->
                                                             <td width="180"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; background-color: #FAFAFA; vertical-align: middle; min-width: 180px; max-width: 180px;">
                                                                 <table role="presentation" cellspacing="0"
@@ -179,7 +164,6 @@
                                                                     </tr>
                                                                 </table>
                                                             </td>
-                                                            <!-- Time tracked column header -->
                                                             <td width="130"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; background-color: #FAFAFA; vertical-align: middle; min-width: 130px; max-width: 130px;">
                                                                 <table role="presentation" cellspacing="0"
@@ -192,7 +176,6 @@
                                                                     </tr>
                                                                 </table>
                                                             </td>
-                                                            <!-- Activity timeline column header -->
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; background-color: #FAFAFA; vertical-align: middle;">
                                                                 <table role="presentation" cellspacing="0"
@@ -227,8 +210,6 @@
                                                             </td>
                                                         </tr>
 
-                                                        <!-- Table Data Rows -->
-                                                        <!-- Row 1: Julia Willson -->
                                                         <tr>
                                                             <td width="180"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle; min-width: 180px; max-width: 180px;">
@@ -237,7 +218,7 @@
                                                                     <tr>
                                                                         <td
                                                                             style="padding-right: 8px; vertical-align: middle;">
-                                                                            <!-- Avatar (falls back to default if missing) -->
+                                                                            
                                                                             <img src="{Employee1Avatar}"
                                                                                 onerror="this.onerror=null;this.src='https://neural-ops.s3.us-west-1.amazonaws.com/83/users/184/avatar.webp'"
                                                                                 alt="Julia Willson" width="32"
@@ -262,17 +243,17 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle;">
-                                                                <!-- Activity bar with active/inactive segments -->
+                                                                
                                                                 <table role="presentation" cellspacing="0"
                                                                     cellpadding="0" border="0">
                                                                     <tr>
-                                                                        <!-- Active segment 1 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 55px; min-width: 55px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -295,15 +276,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 2 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 14px; min-width: 14px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -326,15 +307,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 3 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 71px; min-width: 71px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -357,9 +338,9 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 4 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 77px; min-width: 77px;">
                                                                         </td>
@@ -368,7 +349,6 @@
                                                             </td>
                                                         </tr>
 
-                                                        <!-- Row 2: Tom Hassan -->
                                                         <tr>
                                                             <td width="180"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle; min-width: 180px; max-width: 180px;">
@@ -400,11 +380,11 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle;">
-                                                                <!-- Activity bar with active/inactive segments -->
+                                                                
                                                                 <table role="presentation" cellspacing="0"
                                                                     cellpadding="0" border="0">
                                                                     <tr>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -427,15 +407,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 1 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 14px; min-width: 14px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -458,15 +438,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 2 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 71px; min-width: 71px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -489,15 +469,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 3 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 77px; min-width: 77px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -525,7 +505,6 @@
                                                             </td>
                                                         </tr>
 
-                                                        <!-- Row 3: Brian Thompson -->
                                                         <tr>
                                                             <td width="180"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle; min-width: 180px; max-width: 180px;">
@@ -558,17 +537,17 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle;">
-                                                                <!-- Activity bar with active/inactive segments -->
+                                                                
                                                                 <table role="presentation" cellspacing="0"
                                                                     cellpadding="0" border="0">
                                                                     <tr>
-                                                                        <!-- Active segment 1 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 55px; min-width: 55px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -591,15 +570,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 2 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 14px; min-width: 14px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -622,15 +601,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 3 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 71px; min-width: 71px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -653,9 +632,9 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 4 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 77px; min-width: 77px;">
                                                                         </td>
@@ -664,7 +643,6 @@
                                                             </td>
                                                         </tr>
 
-                                                        <!-- Row 4: Jessy Lu -->
                                                         <tr>
                                                             <td width="180"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle; min-width: 180px; max-width: 180px;">
@@ -696,11 +674,11 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle;">
-                                                                <!-- Activity bar with active/inactive segments -->
+                                                                
                                                                 <table role="presentation" cellspacing="0"
                                                                     cellpadding="0" border="0">
                                                                     <tr>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -723,15 +701,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 1 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 14px; min-width: 14px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -754,15 +732,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 2 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 71px; min-width: 71px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -785,15 +763,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 3 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 77px; min-width: 77px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -821,7 +799,6 @@
                                                             </td>
                                                         </tr>
 
-                                                        <!-- Row 5: Bruce Banner -->
                                                         <tr>
                                                             <td width="180"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle; min-width: 180px; max-width: 180px;">
@@ -854,17 +831,17 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle;">
-                                                                <!-- Activity bar with active/inactive segments -->
+                                                                
                                                                 <table role="presentation" cellspacing="0"
                                                                     cellpadding="0" border="0">
                                                                     <tr>
-                                                                        <!-- Active segment 1 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 55px; min-width: 55px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -887,15 +864,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 2 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 14px; min-width: 14px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -918,15 +895,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 3 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 71px; min-width: 71px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -949,9 +926,9 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 4 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 77px; min-width: 77px;">
                                                                         </td>
@@ -960,7 +937,6 @@
                                                             </td>
                                                         </tr>
 
-                                                        <!-- Row 6: Kate Harris -->
                                                         <tr>
                                                             <td width="180"
                                                                 style="padding: 12px; border-bottom: 0; vertical-align: middle; min-width: 180px; max-width: 180px;">
@@ -992,11 +968,11 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 0; vertical-align: middle;">
-                                                                <!-- Activity bar with active/inactive segments -->
+                                                                
                                                                 <table role="presentation" cellspacing="0"
                                                                     cellpadding="0" border="0">
                                                                     <tr>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -1019,15 +995,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 1 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 14px; min-width: 14px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -1050,15 +1026,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 2 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 71px; min-width: 71px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -1081,15 +1057,15 @@
                                                                                     fill="url(#diagStripe-a)" />
                                                                             </svg>
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Active segment 3 -->
+                                                                        
                                                                         <td
                                                                             style="height: 7px; background-color: #27827A; border-radius: 3px; width: 77px; min-width: 77px;">
                                                                         </td>
-                                                                        <!-- Gap -->
+                                                                        
                                                                         <td style="width: 2px; min-width: 2px;"></td>
-                                                                        <!-- Inactive segment with diagonal stripes -->
+                                                                        
                                                                         <td
                                                                             style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
                                                                             <svg width="32" height="7"
@@ -1121,7 +1097,7 @@
                                             </tr>
                                         </table>
 
-                                        <!-- Bottom text section -->
+                                        
                                         <table role="presentation" cellspacing="0" cellpadding="0" border="0"
                                             width="100%" style="margin: 40px 0;">
                                             <tr>
@@ -1160,7 +1136,7 @@
                                     <td style="margin: 0; padding: 0;" valign="top">
                                         <table role="presentation" cellspacing="0" cellpadding="0" border="0"
                                             width="100%" style="background-color: transparent;">
-                                            <!-- Footer text section -->
+                                            
                                             <tr>
                                                 <td style="padding-bottom: 48px;">
                                                     <table role="presentation" cellspacing="0" cellpadding="0"
