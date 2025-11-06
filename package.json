@@ -1,0 +1,22 @@
+{
+  "name": "neuralops-email-template",
+  "version": "1.0.0",
+  "description": "NeuralOps Email Template Collection",
+  "scripts": {
+    "dev": "http-server . -p 3000 -o",
+    "start": "http-server . -p 3000 -o",
+    "preview": "http-server . -p 3000",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "email",
+    "templates",
+    "html"
+  ],
+  "author": "NeuralOps",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+
