@@ -14,6 +14,23 @@
     <!--[if mso]>
     <style type="text/css">
         body, table, td {font-family: 'Geist', Arial, Helvetica, sans-serif !important;}
+        /* Responsive adjustments for employee table (email-safe) */
+        @media screen and (max-width: 600px) {
+            /* Stack cells vertically on narrow screens */
+            .employee-table tr { display: block !important; }
+            .employee-table td { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
+            .employee-table td[width="180"],
+            .employee-table td[width="130"],
+            .employee-table td[width="100%"] { width: 100% !important; max-width: 100% !important; }
+
+            /* Tweak paddings and borders for stacked layout */
+            .employee-table td { padding-top: 10px !important; padding-bottom: 10px !important; border-bottom: 1px solid #EAECF0 !important; }
+            .employee-table tr:last-child td { border-bottom: 0 !important; }
+
+            /* Timeline tables use fixed width for mobile scrolling */
+            .timeline-labels table,
+            .timeline-bars table { width: 500px !important; min-width: 500px !important; }
+        }
     </style>
     <![endif]-->
 
@@ -68,6 +85,24 @@
                     transparent 2px,
                     #E0E0E0 2px,
                     #E0E0E0 4px);
+        }
+
+        /* Responsive adjustments for employee table (email-safe) */
+        @media screen and (max-width: 600px) {
+            /* Stack cells vertically on narrow screens */
+            .employee-table tr { display: block !important; }
+            .employee-table td { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
+            .employee-table td[width="180"],
+            .employee-table td[width="130"],
+            .employee-table td[width="100%"] { width: 100% !important; max-width: 100% !important; }
+
+            /* Tweak paddings and borders for stacked layout */
+            .employee-table td { padding-top: 10px !important; padding-bottom: 10px !important; border-bottom: 1px solid #EAECF0 !important; }
+            .employee-table tr:last-child td { border-bottom: 0 !important; }
+
+            /* Timeline tables use fixed width for mobile scrolling */
+            .timeline-labels table,
+            .timeline-bars table { width: 500px !important; min-width: 500px !important; }
         }
     </style>
     <!--<![endif]-->
@@ -127,7 +162,7 @@
                                             </tr>
                                         </table>
 
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="employee-table"
                                             width="100%"
                                             style="background-color: #FFFFFF; border: 1px solid #EAECF0; border-radius: 6px; box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); margin-bottom: 16px;">
                                             <tr>
@@ -176,10 +211,10 @@
                                                                     </tr>
                                                                 </table>
                                                             </td>
-                                                            <td width="100%"
+                                                            <td width="100%" class="timeline-labels"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; background-color: #FAFAFA; vertical-align: middle;">
                                                                 <table role="presentation" cellspacing="0"
-                                                                    cellpadding="0" border="0" width="100%">
+                                                                    cellpadding="0" border="0" width="500" style="width: 500px; min-width: 500px;">
                                                                     <tr>
                                                                         <td
                                                                             style="font-family: 'Geist', Arial, Helvetica, sans-serif; font-size: 10px; font-weight: 500; line-height: 1.5; color: #475467; letter-spacing: 0.1px; white-space: nowrap;">
@@ -243,9 +278,8 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle;">
-                                                                
                                                                 <table role="presentation" cellspacing="0"
-                                                                    cellpadding="0" border="0">
+                                                                    cellpadding="0" border="0" width="500" style="width: 500px; min-width: 500px;">
                                                                     <tr>
                                                                         
                                                                         <td
@@ -254,27 +288,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -285,27 +299,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -316,27 +310,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -380,32 +354,11 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle;">
-                                                                
                                                                 <table role="presentation" cellspacing="0"
-                                                                    cellpadding="0" border="0">
+                                                                    cellpadding="0" border="0" width="500" style="width: 500px; min-width: 500px;">
                                                                     <tr>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -416,27 +369,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -447,27 +380,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -478,27 +391,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -537,9 +430,8 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle;">
-                                                                
                                                                 <table role="presentation" cellspacing="0"
-                                                                    cellpadding="0" border="0">
+                                                                    cellpadding="0" border="0" width="500" style="width: 500px; min-width: 500px;">
                                                                     <tr>
                                                                         
                                                                         <td
@@ -548,27 +440,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -579,27 +451,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -610,27 +462,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -674,32 +506,11 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle;">
-                                                                
                                                                 <table role="presentation" cellspacing="0"
-                                                                    cellpadding="0" border="0">
+                                                                    cellpadding="0" border="0" width="500" style="width: 500px; min-width: 500px;">
                                                                     <tr>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -710,27 +521,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -741,27 +532,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -772,27 +543,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -831,9 +582,8 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 1px solid #EAECF0; vertical-align: middle;">
-                                                                
                                                                 <table role="presentation" cellspacing="0"
-                                                                    cellpadding="0" border="0">
+                                                                    cellpadding="0" border="0" width="500" style="width: 500px; min-width: 500px;">
                                                                     <tr>
                                                                         
                                                                         <td
@@ -842,27 +592,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -873,27 +603,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -904,27 +614,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -968,32 +658,11 @@
                                                             </td>
                                                             <td width="100%"
                                                                 style="padding: 12px; border-bottom: 0; vertical-align: middle;">
-                                                                
                                                                 <table role="presentation" cellspacing="0"
-                                                                    cellpadding="0" border="0">
+                                                                    cellpadding="0" border="0" width="500" style="width: 500px; min-width: 500px;">
                                                                     <tr>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -1004,27 +673,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -1035,27 +684,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#667085"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
@@ -1066,27 +695,7 @@
                                                                         
                                                                         <td style="width: 2px; min-width: 2px;"></td>
                                                                         
-                                                                        <td
-                                                                            style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle;">
-                                                                            <svg width="32" height="7"
-                                                                                viewBox="0 0 32 7"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                style="display: block;">
-                                                                                <defs>
-                                                                                    <pattern id="diagStripe-a" x="0"
-                                                                                        y="0" width="4" height="4"
-                                                                                        patternUnits="userSpaceOnUse"
-                                                                                        patternTransform="rotate(45)">
-                                                                                        <rect width="4" height="4"
-                                                                                            fill="#FAFAFA" />
-                                                                                        <line x1="0" y1="0" x2="4"
-                                                                                            y2="4" stroke="#D0D0D0"
-                                                                                            stroke-width="0.5" />
-                                                                                    </pattern>
-                                                                                </defs>
-                                                                                <rect width="32" height="7" rx="3"
-                                                                                    fill="url(#diagStripe-a)" />
-                                                                            </svg>
+                                                                        <td style="width: 32px; min-width: 32px; height: 7px; padding: 0; vertical-align: middle; background-color: #FAFAFA; background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #E0E0E0 2px, #E0E0E0 4px); border-radius: 3px;">
                                                                         </td>
                                                                     </tr>
                                                                 </table>
