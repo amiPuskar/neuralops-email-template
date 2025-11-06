@@ -50,11 +50,11 @@ yarn preview
 
 The project includes the following email templates:
 
-1. **Workflow Summary** (`check_workflow_Summary.html`)
+1. **Workflow Summary** (`emails/check_workflow_Summary.html`)
    - Daily Ops Check Workflow Summary Template
 
-2. **Workflow Summary (Copy)** (`check_workflow_Summary copy.html`)
-   - Alternative version of the Workflow Summary Template
+2. **Workflow Summary (Backup)** (`emails/check_workflow_Summary_backup.html`)
+   - Backup version of the Workflow Summary Template
 
 Access all templates through the main index page at `http://localhost:3000`.
 
@@ -85,14 +85,17 @@ The `vercel.json` configuration file includes:
 ```
 NeuralOps-email-template/
 ├── index.html              # Main landing page with template navigation
-├── check_workflow_Summary.html
-├── check_workflow_Summary copy.html
+├── emails/                 # Email templates directory
+│   ├── check_workflow_Summary.html
+│   └── check_workflow_Summary_backup.html
 ├── package.json            # Project dependencies and scripts
 ├── vercel.json             # Vercel deployment configuration
 ├── .gitignore             # Git ignore rules
-├── image/                 # Image assets directory
+├── mcp.json               # MCP server configuration
 ├── FIGMA_SETUP.md         # Figma setup documentation
 ├── MCP_SETUP.md           # MCP setup documentation
+├── setup-mcp.ps1          # Windows MCP setup script
+├── setup-mcp.sh           # Unix MCP setup script
 └── README.md              # This file
 ```
 
@@ -114,8 +117,8 @@ NeuralOps-email-template/
 
 ### Adding New Templates
 
-1. Create a new HTML file in the root directory
-2. Add a button link in `index.html` to navigate to your new template
+1. Create a new HTML file in the `emails/` directory
+2. Add a button link in `index.html` to navigate to your new template (use `/emails/your-template.html`)
 3. Follow the existing email template structure for consistency
 
 ### Local Development Tips
